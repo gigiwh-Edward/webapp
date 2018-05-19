@@ -1,0 +1,27 @@
+#app {
+    background: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 1100px;
+}
+
+.header {
+    line-height: 46px;
+    height: 46px;
+}
+
+.header-title {
+    font-size: 24px;
+    color: #fff;
+}
+
+.layout {
+    height: 100%;
+}
+
+.content {
+    position: relative;
+}

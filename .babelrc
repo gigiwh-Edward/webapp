@@ -1,0 +1,16 @@
+{
+    "plugins": [
+        ["import", {
+            "libraryName": "antd",
+            "style": true
+        }],
+        "syntax-dynamic-import", [
+            "transform-runtime", {
+                "helpers": false,
+                "polyfill": false,
+                "regenerator": true,
+                "moduleName": "babel-runtime"
+            }
+        ]
+    ]
+}
