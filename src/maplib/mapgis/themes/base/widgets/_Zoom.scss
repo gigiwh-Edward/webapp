@@ -1,0 +1,45 @@
+@mixin zoom() {
+  .mapgis-zoom {
+    display: flex;
+    flex-flow: column nowrap;
+    &.mapgis-zoom--horizontal {
+      flex-flow: row-reverse nowrap;
+      .mapgis-widget-button {
+        &:last-child {
+          border-top: none;
+        }
+        &:first-child {
+          border-left: solid 1px $border_color;
+        }
+      }
+    }
+    .mapgis-widget-button {
+      box-shadow: none;
+      &:first-child {
+        margin-bottom: 0;
+      }
+      &:last-child {
+        border-top: solid 1px $border_color;
+      }
+    }
+  }
+
+  html[dir="rtl"] {
+    .mapgis-zoom {
+      &.mapgis-zoom--horizontal {
+        .mapgis-widget-button {
+          &:first-child {
+            border-top: none;
+          }
+          &:last-child {
+            border-left: solid 1px $border_color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@if $include_Zoom == true {
+  @include zoom();
+}

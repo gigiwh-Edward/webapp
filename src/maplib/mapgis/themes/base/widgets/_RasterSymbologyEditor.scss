@@ -1,0 +1,112 @@
+@mixin rasterSymbologyEditor() {
+  $thumbnail-height: 32px;
+  $thumbnail-width: 32px;
+
+  .mapgis-raster-symbology {
+    display: flex;
+    flex-flow: column nowrap;
+    @import "../../../dgrid/css/dgrid.css";
+  }
+  .mapgis-raster-symbology-editor--hidden {
+    display: none;
+  }
+  .mapgis-raster-symbology-editor--block {
+    display: block;
+  }
+  .mapgis-raster-symbology-editor__percent-clip-row {
+    display: table-row;
+  }
+  .mapgis-raster-symbology-editor__std-deviation-row {
+    display: table-row;
+  }
+  .mapgis-raster-symbology-editor__stretch-dra-row {
+    display: table-row;
+  }
+  .mapgis-raster-symbology-editor__stretch-color-ramp-row {
+    display: table-row;
+  }
+  .mapgis-raster-symbology-editor__table {
+    width: 100%;
+  }
+  .mapgis-raster-symbology-editor__filtering-select {
+    width: 100% !important;
+  }
+  .field-esriRasterSymbologyEditorUniqueValueSymbol {
+    width: 20%;
+  }
+  .field-esriRasterSymbologyEditorUniqueValueValue {
+    width: 80%;
+  }
+  .mapgis-raster-symbology-editor__thumbnail-image {
+    width: $thumbnail-width;
+    height: $thumbnail-height;
+  }
+  .mapgis-raster-symbology-editor__stretch-type-icon--min-max {
+    background-image: url(../base/images/raster-symbology-editor-stretch-type-min-max.png);
+  }
+  .mapgis-raster-symbology-editor__stretch-type-icon--none {
+    background-image: url(../base/images/raster-symbology-editor-stretch-type-none.png);
+  }
+  .mapgis-raster-symbology-editor__stretch-type-icon--standard-deviation {
+    background-image: url(../base/images/raster-symbology-editor-stretch-type-standard-deviation.png);
+  }
+  .mapgis-raster-symbology-editor__stretch-type-icon--percent-clip {
+    background-image: url(../base/images/raster-symbology-editor-stretch-type-percent-clip.png);
+  }
+  .mapgis-raster-symbology-editor__band-combination-icon--natural-color {
+    background-image: url(../base/images/raster-symbology-editor-band-combination-natural-color.png);
+  }
+  .mapgis-raster-symbology-editor__band-combination-icon--land-water {
+    background-image: url(../base/images/raster-symbology-editor-band-combination-land-water.png);
+  }
+  .mapgis-raster-symbology-editor__band-combination-icon--landuse {
+    background-image: url(../base/images/raster-symbology-editor-band-combination-landuse.png);
+  }
+  .mapgis-raster-symbology-editor__band-combination-icon--bathymetric {
+    background-image: url(../base/images/raster-symbology-editor-band-combination-bathymetric.png);
+  }
+  .mapgis-raster-symbology-editor__band-combination-icon--vegetation {
+    background-image: url(../base/images/raster-symbology-editor-band-combination-vegetation.png);
+  }
+  .mapgis-raster-symbology-editor__band-combination-icon--color-infrared {
+    background-image: url(../base/images/raster-symbology-editor-band-combination-color-infrared.png);
+  }
+  .mapgis-raster-symbology-editor__symbology-type-icon--rgb {
+    background-image: url(../base/images/raster-symbology-editor-symbology-type-rgb.png);
+    @extend .mapgis-raster-symbology-editor__thumbnail-image;
+  }
+  .mapgis-raster-symbology-editor__symbology-type-icon--stretch {
+    background-image: url(../base/images/raster-symbology-editor-symbology-type-stretch.png);
+    @extend .mapgis-raster-symbology-editor__thumbnail-image;
+  }
+  .mapgis-raster-symbology-editor__symbology-type-icon--unique-value {
+    background-image: url(../base/images/raster-symbology-editor-symbology-type-unique-value.png);
+    @extend .mapgis-raster-symbology-editor__thumbnail-image;
+  }
+  .mapgis-raster-symbology-editor__symbology-type-icon--discrete {
+    background-image: url(../base/images/raster-symbology-editor-symbology-type-discrete.png);
+    @extend .mapgis-raster-symbology-editor__thumbnail-image;
+  }
+  .mapgis-raster-symbology-editor__menu-item-td {
+    border: none !important;
+    background: none !important;
+  }
+  .mapgis-raster-symbology-editor__dgrid-symbol-cell {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mapgis-raster-symbology-editor__menu-item-text {
+    white-space: pre-wrap;
+    width: 40ex;
+  }
+  .mapgis-raster-symbology-editor__checkbox {
+    display: inline-block;
+  }
+}
+
+@if $include_RasterSymbologyEditor == true {
+  @include rasterSymbologyEditor();
+}

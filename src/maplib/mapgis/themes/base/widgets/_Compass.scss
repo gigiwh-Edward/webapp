@@ -1,0 +1,20 @@
+$compass_size: 20px !default;
+
+@mixin compass() {
+  .mapgis-compass {
+    border-radius: 50%;
+  }
+
+  .mapgis-compass--active {
+    background-color: $selected_background_color;
+  }
+
+  .mapgis-compass .mapgis-compass__icon {
+    font-size: $compass_size;
+  }
+  // TODO: update with correctly sized compass SVG.
+}
+
+@if $include_Compass == true {
+  @include compass();
+}

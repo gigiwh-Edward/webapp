@@ -1,0 +1,843 @@
+@import "variables";
+
+@font-face {
+  font-family: 'CalciteWebCoreIcons';
+  src:
+    url('#{$icomoon-font-path}/CalciteWebCoreIcons.ttf?cu4poq') format('truetype'),
+    url('#{$icomoon-font-path}/CalciteWebCoreIcons.woff?cu4poq') format('woff'),
+    url('#{$icomoon-font-path}/CalciteWebCoreIcons.svg?cu4poq#CalciteWebCoreIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="mapgis-icon-"], [class*=" mapgis-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'CalciteWebCoreIcons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mapgis-icon-close {
+  &:before {
+    content: $mapgis-icon-close;
+  }
+}
+.mapgis-icon-drag-horizontal {
+  &:before {
+    content: $mapgis-icon-drag-horizontal;
+  }
+}
+.mapgis-icon-drag-vertical {
+  &:before {
+    content: $mapgis-icon-drag-vertical;
+  }
+}
+.mapgis-icon-handle-horizontal {
+  &:before {
+    content: $mapgis-icon-handle-horizontal;
+  }
+}
+.mapgis-icon-handle-vertical {
+  &:before {
+    content: $mapgis-icon-handle-vertical;
+  }
+}
+.mapgis-icon-check-mark {
+  &:before {
+    content: $mapgis-icon-check-mark;
+  }
+}
+.mapgis-icon-left-triangle-arrow {
+  &:before {
+    content: $mapgis-icon-left-triangle-arrow;
+  }
+}
+.mapgis-icon-right-triangle-arrow {
+  &:before {
+    content: $mapgis-icon-right-triangle-arrow;
+  }
+}
+.mapgis-icon-down-arrow {
+  &:before {
+    content: $mapgis-icon-down-arrow;
+  }
+}
+.mapgis-icon-up-arrow {
+  &:before {
+    content: $mapgis-icon-up-arrow;
+  }
+}
+.mapgis-icon-overview-arrow-bottom-left {
+  &:before {
+    content: $mapgis-icon-overview-arrow-bottom-left;
+  }
+}
+.mapgis-icon-overview-arrow-bottom-right {
+  &:before {
+    content: $mapgis-icon-overview-arrow-bottom-right;
+  }
+}
+.mapgis-icon-overview-arrow-top-left {
+  &:before {
+    content: $mapgis-icon-overview-arrow-top-left;
+  }
+}
+.mapgis-icon-overview-arrow-top-right {
+  &:before {
+    content: $mapgis-icon-overview-arrow-top-right;
+  }
+}
+.mapgis-icon-maximize {
+  &:before {
+    content: $mapgis-icon-maximize;
+  }
+}
+.mapgis-icon-minimize {
+  &:before {
+    content: $mapgis-icon-minimize;
+  }
+}
+.mapgis-icon-checkbox-unchecked {
+  &:before {
+    content: $mapgis-icon-checkbox-unchecked;
+  }
+}
+.mapgis-icon-checkbox-checked {
+  &:before {
+    content: $mapgis-icon-checkbox-checked;
+  }
+}
+.mapgis-icon-radio-unchecked {
+  &:before {
+    content: $mapgis-icon-radio-unchecked;
+  }
+}
+.mapgis-icon-radio-checked {
+  &:before {
+    content: $mapgis-icon-radio-checked;
+  }
+}
+.mapgis-icon-up-arrow-circled {
+  &:before {
+    content: $mapgis-icon-up-arrow-circled;
+  }
+}
+.mapgis-icon-down-arrow-circled {
+  &:before {
+    content: $mapgis-icon-down-arrow-circled;
+  }
+}
+.mapgis-icon-left-arrow-circled {
+  &:before {
+    content: $mapgis-icon-left-arrow-circled;
+  }
+}
+.mapgis-icon-right-arrow-circled {
+  &:before {
+    content: $mapgis-icon-right-arrow-circled;
+  }
+}
+.mapgis-icon-zoom-out-fixed {
+  &:before {
+    content: $mapgis-icon-zoom-out-fixed;
+  }
+}
+.mapgis-icon-zoom-in-fixed {
+  &:before {
+    content: $mapgis-icon-zoom-in-fixed;
+  }
+}
+.mapgis-icon-refresh {
+  &:before {
+    content: $mapgis-icon-refresh;
+  }
+}
+.mapgis-icon-edit {
+  &:before {
+    content: $mapgis-icon-edit;
+  }
+}
+.mapgis-icon-authorize {
+  &:before {
+    content: $mapgis-icon-authorize;
+  }
+}
+.mapgis-icon-map-pin {
+  &:before {
+    content: $mapgis-icon-map-pin;
+  }
+}
+.mapgis-icon-blank-map-pin {
+  &:before {
+    content: $mapgis-icon-blank-map-pin;
+  }
+}
+.mapgis-icon-table {
+  &:before {
+    content: $mapgis-icon-table;
+  }
+}
+.mapgis-icon-plus {
+  &:before {
+    content: $mapgis-icon-plus;
+  }
+}
+.mapgis-icon-minus {
+  &:before {
+    content: $mapgis-icon-minus;
+  }
+}
+.mapgis-icon-beginning {
+  &:before {
+    content: $mapgis-icon-beginning;
+  }
+}
+.mapgis-icon-reverse {
+  &:before {
+    content: $mapgis-icon-reverse;
+  }
+}
+.mapgis-icon-pause {
+  &:before {
+    content: $mapgis-icon-pause;
+  }
+}
+.mapgis-icon-play {
+  &:before {
+    content: $mapgis-icon-play;
+  }
+}
+.mapgis-icon-forward {
+  &:before {
+    content: $mapgis-icon-forward;
+  }
+}
+.mapgis-icon-end {
+  &:before {
+    content: $mapgis-icon-end;
+  }
+}
+.mapgis-icon-erase {
+  &:before {
+    content: $mapgis-icon-erase;
+  }
+}
+.mapgis-icon-up-down-arrows {
+  &:before {
+    content: $mapgis-icon-up-down-arrows;
+  }
+}
+.mapgis-icon-left {
+  &:before {
+    content: $mapgis-icon-left;
+  }
+}
+.mapgis-icon-right {
+  &:before {
+    content: $mapgis-icon-right;
+  }
+}
+.mapgis-icon-announcement {
+  &:before {
+    content: $mapgis-icon-announcement;
+  }
+}
+.mapgis-icon-notice-round {
+  &:before {
+    content: $mapgis-icon-notice-round;
+  }
+}
+.mapgis-icon-notice-triangle {
+  &:before {
+    content: $mapgis-icon-notice-triangle;
+  }
+}
+.mapgis-icon-home {
+  &:before {
+    content: $mapgis-icon-home;
+  }
+}
+.mapgis-icon-locate {
+  &:before {
+    content: $mapgis-icon-locate;
+  }
+}
+.mapgis-icon-expand {
+  &:before {
+    content: $mapgis-icon-expand;
+  }
+}
+.mapgis-icon-collapse {
+  &:before {
+    content: $mapgis-icon-collapse;
+  }
+}
+.mapgis-icon-layer-list {
+  &:before {
+    content: $mapgis-icon-layer-list;
+  }
+}
+.mapgis-icon-basemap {
+  &:before {
+    content: $mapgis-icon-basemap;
+  }
+}
+.mapgis-icon-globe {
+  &:before {
+    content: $mapgis-icon-globe;
+  }
+}
+.mapgis-icon-applications {
+  &:before {
+    content: $mapgis-icon-applications;
+  }
+}
+.mapgis-icon-arrow-up-circled {
+  &:before {
+    content: $mapgis-icon-arrow-up-circled;
+  }
+}
+.mapgis-icon-arrow-down-circled {
+  &:before {
+    content: $mapgis-icon-arrow-down-circled;
+  }
+}
+.mapgis-icon-arrow-left-circled {
+  &:before {
+    content: $mapgis-icon-arrow-left-circled;
+  }
+}
+.mapgis-icon-arrow-right-circled {
+  &:before {
+    content: $mapgis-icon-arrow-right-circled;
+  }
+}
+.mapgis-icon-minus-circled {
+  &:before {
+    content: $mapgis-icon-minus-circled;
+  }
+}
+.mapgis-icon-plus-circled {
+  &:before {
+    content: $mapgis-icon-plus-circled;
+  }
+}
+.mapgis-icon-add-attachment {
+  &:before {
+    content: $mapgis-icon-add-attachment;
+  }
+}
+.mapgis-icon-attachment {
+  &:before {
+    content: $mapgis-icon-attachment;
+  }
+}
+.mapgis-icon-calendar {
+  &:before {
+    content: $mapgis-icon-calendar;
+  }
+}
+.mapgis-icon-close-circled {
+  &:before {
+    content: $mapgis-icon-close-circled;
+  }
+}
+.mapgis-icon-browser {
+  &:before {
+    content: $mapgis-icon-browser;
+  }
+}
+.mapgis-icon-collection {
+  &:before {
+    content: $mapgis-icon-collection;
+  }
+}
+.mapgis-icon-comment {
+  &:before {
+    content: $mapgis-icon-comment;
+  }
+}
+.mapgis-icon-configure-popup {
+  &:before {
+    content: $mapgis-icon-configure-popup;
+  }
+}
+.mapgis-icon-contact {
+  &:before {
+    content: $mapgis-icon-contact;
+  }
+}
+.mapgis-icon-dashboard {
+  &:before {
+    content: $mapgis-icon-dashboard;
+  }
+}
+.mapgis-icon-deny {
+  &:before {
+    content: $mapgis-icon-deny;
+  }
+}
+.mapgis-icon-description {
+  &:before {
+    content: $mapgis-icon-description;
+  }
+}
+.mapgis-icon-directions {
+  &:before {
+    content: $mapgis-icon-directions;
+  }
+}
+.mapgis-icon-directions2 {
+  &:before {
+    content: $mapgis-icon-directions2;
+  }
+}
+.mapgis-icon-documentation {
+  &:before {
+    content: $mapgis-icon-documentation;
+  }
+}
+.mapgis-icon-duplicate {
+  &:before {
+    content: $mapgis-icon-duplicate;
+  }
+}
+.mapgis-icon-review {
+  &:before {
+    content: $mapgis-icon-review;
+  }
+}
+.mapgis-icon-environment-settings {
+  &:before {
+    content: $mapgis-icon-environment-settings;
+  }
+}
+.mapgis-icon-error {
+  &:before {
+    content: $mapgis-icon-error;
+  }
+}
+.mapgis-icon-error2 {
+  &:before {
+    content: $mapgis-icon-error2;
+  }
+}
+.mapgis-icon-experimental {
+  &:before {
+    content: $mapgis-icon-experimental;
+  }
+}
+.mapgis-icon-feature-layer {
+  &:before {
+    content: $mapgis-icon-feature-layer;
+  }
+}
+.mapgis-icon-filter {
+  &:before {
+    content: $mapgis-icon-filter;
+  }
+}
+.mapgis-icon-grant {
+  &:before {
+    content: $mapgis-icon-grant;
+  }
+}
+.mapgis-icon-group {
+  &:before {
+    content: $mapgis-icon-group;
+  }
+}
+.mapgis-icon-key {
+  &:before {
+    content: $mapgis-icon-key;
+  }
+}
+.mapgis-icon-labels {
+  &:before {
+    content: $mapgis-icon-labels;
+  }
+}
+.mapgis-icon-tag {
+  &:before {
+    content: $mapgis-icon-tag;
+  }
+}
+.mapgis-icon-layers {
+  &:before {
+    content: $mapgis-icon-layers;
+  }
+}
+.mapgis-icon-left-arrow {
+  &:before {
+    content: $mapgis-icon-left-arrow;
+  }
+}
+.mapgis-icon-right-arrow {
+  &:before {
+    content: $mapgis-icon-right-arrow;
+  }
+}
+.mapgis-icon-link-external {
+  &:before {
+    content: $mapgis-icon-link-external;
+  }
+}
+.mapgis-icon-link {
+  &:before {
+    content: $mapgis-icon-link;
+  }
+}
+.mapgis-icon-loading-indicator {
+  &:before {
+    content: $mapgis-icon-loading-indicator;
+  }
+}
+.mapgis-icon-maps {
+  &:before {
+    content: $mapgis-icon-maps;
+  }
+}
+.mapgis-icon-marketplace {
+  &:before {
+    content: $mapgis-icon-marketplace;
+  }
+}
+.mapgis-icon-media {
+  &:before {
+    content: $mapgis-icon-media;
+  }
+}
+.mapgis-icon-media2 {
+  &:before {
+    content: $mapgis-icon-media2;
+  }
+}
+.mapgis-icon-menu {
+  &:before {
+    content: $mapgis-icon-menu;
+  }
+}
+.mapgis-icon-mobile {
+  &:before {
+    content: $mapgis-icon-mobile;
+  }
+}
+.mapgis-icon-phone {
+  &:before {
+    content: $mapgis-icon-phone;
+  }
+}
+.mapgis-icon-navigation {
+  &:before {
+    content: $mapgis-icon-navigation;
+  }
+}
+.mapgis-icon-pan {
+  &:before {
+    content: $mapgis-icon-pan;
+  }
+}
+.mapgis-icon-printer {
+  &:before {
+    content: $mapgis-icon-printer;
+  }
+}
+.mapgis-icon-pie-chart {
+  &:before {
+    content: $mapgis-icon-pie-chart;
+  }
+}
+.mapgis-icon-chart {
+  &:before {
+    content: $mapgis-icon-chart;
+  }
+}
+.mapgis-icon-line-chart {
+  &:before {
+    content: $mapgis-icon-line-chart;
+  }
+}
+.mapgis-icon-question {
+  &:before {
+    content: $mapgis-icon-question;
+  }
+}
+.mapgis-icon-resend-invitation {
+  &:before {
+    content: $mapgis-icon-resend-invitation;
+  }
+}
+.mapgis-icon-rotate {
+  &:before {
+    content: $mapgis-icon-rotate;
+  }
+}
+.mapgis-icon-save {
+  &:before {
+    content: $mapgis-icon-save;
+  }
+}
+.mapgis-icon-settings {
+  &:before {
+    content: $mapgis-icon-settings;
+  }
+}
+.mapgis-icon-settings2 {
+  &:before {
+    content: $mapgis-icon-settings2;
+  }
+}
+.mapgis-icon-share {
+  &:before {
+    content: $mapgis-icon-share;
+  }
+}
+.mapgis-icon-sign-out {
+  &:before {
+    content: $mapgis-icon-sign-out;
+  }
+}
+.mapgis-icon-support {
+  &:before {
+    content: $mapgis-icon-support;
+  }
+}
+.mapgis-icon-user {
+  &:before {
+    content: $mapgis-icon-user;
+  }
+}
+.mapgis-icon-time-clock {
+  &:before {
+    content: $mapgis-icon-time-clock;
+  }
+}
+.mapgis-icon-trash {
+  &:before {
+    content: $mapgis-icon-trash;
+  }
+}
+.mapgis-icon-upload {
+  &:before {
+    content: $mapgis-icon-upload;
+  }
+}
+.mapgis-icon-download {
+  &:before {
+    content: $mapgis-icon-download;
+  }
+}
+.mapgis-icon-zoom-in-magnifying-glass {
+  &:before {
+    content: $mapgis-icon-zoom-in-magnifying-glass;
+  }
+}
+.mapgis-icon-search {
+  &:before {
+    content: $mapgis-icon-search;
+  }
+}
+.mapgis-icon-zoom-out-magnifying-glass {
+  &:before {
+    content: $mapgis-icon-zoom-out-magnifying-glass;
+  }
+}
+.mapgis-icon-locked {
+  &:before {
+    content: $mapgis-icon-locked;
+  }
+}
+.mapgis-icon-unlocked {
+  &:before {
+    content: $mapgis-icon-unlocked;
+  }
+}
+.mapgis-icon-favorites {
+  &:before {
+    content: $mapgis-icon-favorites;
+  }
+}
+.mapgis-icon-compass {
+  &:before {
+    content: $mapgis-icon-compass;
+  }
+}
+.mapgis-icon-down {
+  &:before {
+    content: $mapgis-icon-down;
+  }
+}
+.mapgis-icon-up {
+  &:before {
+    content: $mapgis-icon-up;
+  }
+}
+.mapgis-icon-chat {
+  &:before {
+    content: $mapgis-icon-chat;
+  }
+}
+.mapgis-icon-dock-bottom {
+  &:before {
+    content: $mapgis-icon-dock-bottom;
+  }
+}
+.mapgis-icon-dock-left {
+  &:before {
+    content: $mapgis-icon-dock-left;
+  }
+}
+.mapgis-icon-dock-right {
+  &:before {
+    content: $mapgis-icon-dock-right;
+  }
+}
+.mapgis-icon-organization {
+  &:before {
+    content: $mapgis-icon-organization;
+  }
+}
+.mapgis-icon-north-navigation {
+  &:before {
+    content: $mapgis-icon-north-navigation;
+  }
+}
+.mapgis-icon-locate-circled {
+  &:before {
+    content: $mapgis-icon-locate-circled;
+  }
+}
+.mapgis-icon-dial {
+  &:before {
+    content: $mapgis-icon-dial;
+  }
+}
+.mapgis-icon-polygon {
+  &:before {
+    content: $mapgis-icon-polygon;
+  }
+}
+.mapgis-icon-polyline {
+  &:before {
+    content: $mapgis-icon-polyline;
+  }
+}
+.mapgis-icon-visible {
+  &:before {
+    content: $mapgis-icon-visible;
+  }
+}
+.mapgis-icon-non-visible {
+  &:before {
+    content: $mapgis-icon-non-visible;
+  }
+}
+.mapgis-icon-link-vertical {
+  &:before {
+    content: $mapgis-icon-link-vertical;
+  }
+}
+.mapgis-icon-unlocked-link-vertical {
+  &:before {
+    content: $mapgis-icon-unlocked-link-vertical;
+  }
+}
+.mapgis-icon-link-horizontal {
+  &:before {
+    content: $mapgis-icon-link-horizontal;
+  }
+}
+.mapgis-icon-unlocked-link-horizontal {
+  &:before {
+    content: $mapgis-icon-unlocked-link-horizontal;
+  }
+}
+.mapgis-icon-swap {
+  &:before {
+    content: $mapgis-icon-swap;
+  }
+}
+.mapgis-icon-cta-link-external {
+  &:before {
+    content: $mapgis-icon-cta-link-external;
+  }
+}
+.mapgis-icon-reply {
+  &:before {
+    content: $mapgis-icon-reply;
+  }
+}
+.mapgis-icon-public {
+  &:before {
+    content: $mapgis-icon-public;
+  }
+}
+.mapgis-icon-share2 {
+  &:before {
+    content: $mapgis-icon-share2;
+  }
+}
+.mapgis-icon-launch-link-external {
+  &:before {
+    content: $mapgis-icon-launch-link-external;
+  }
+}
+.mapgis-icon-rotate-back {
+  &:before {
+    content: $mapgis-icon-rotate-back;
+  }
+}
+.mapgis-icon-pan2 {
+  &:before {
+    content: $mapgis-icon-pan2;
+  }
+}
+.mapgis-icon-tracking {
+  &:before {
+    content: $mapgis-icon-tracking;
+  }
+}
+.mapgis-icon-expand2 {
+  &:before {
+    content: $mapgis-icon-expand2;
+  }
+}
+.mapgis-icon-arrow-down {
+  &:before {
+    content: $mapgis-icon-arrow-down;
+  }
+}
+.mapgis-icon-arrow-up {
+  &:before {
+    content: $mapgis-icon-arrow-up;
+  }
+}
+.mapgis-icon-hollow-eye {
+  &:before {
+    content: $mapgis-icon-hollow-eye;
+  }
+}
+.mapgis-icon-play-circled {
+  &:before {
+    content: $mapgis-icon-play-circled;
+  }
+}
+.mapgis-icon-volume-off {
+  &:before {
+    content: $mapgis-icon-volume-off;
+  }
+}
+.mapgis-icon-volume-on {
+  &:before {
+    content: $mapgis-icon-volume-on;
+  }
+}
+

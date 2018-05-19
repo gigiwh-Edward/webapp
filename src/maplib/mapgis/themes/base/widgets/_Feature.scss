@@ -1,0 +1,313 @@
+@mixin feature() {
+  $attachment_icon_size: 32px !default;
+  $attachment_icon_container_size: ($attachment_icon_size + 10) !default;
+
+  .mapgis-feature__media,
+  .mapgis-feature__attachments,
+  .mapgis-feature__media-container {
+    display: flex;
+  }
+  .mapgis-feature__loading-container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding: $cap_spacing 0;
+  }
+
+  .mapgis-icon-loading-indicator {
+    display: inline-block;
+  }
+
+  .mapgis-feature {
+    width: 100%;
+  } // GENERAL
+  .mapgis-feature h1 {
+    font-size: $h1_text_size;
+    font-weight: $text_weight_header;
+  }
+  .mapgis-feature h2 {
+    font-size: $h2_text_size;
+    font-weight: $text_weight_header;
+  }
+  .mapgis-feature img {
+    max-width: 100%;
+  }
+  .mapgis-feature figcaption {
+    font-size: $caption_text_size;
+    font-style: italic;
+    padding: 0;
+    margin: 0.2em 0 0;
+    display: block;
+  }
+  .mapgis-feature ul {
+    margin-bottom: 1rem;
+    padding: 0 0 0 1rem;
+  }
+  .mapgis-feature li {
+    margin: 0.3em 0;
+  }
+
+  .mapgis-feature__content-element {
+    padding: 0 floor($side_spacing/2) $cap_spacing * 2;
+  }
+
+  .mapgis-feature__content-element:last-child {
+    padding-bottom: 0;
+  }
+  .mapgis-feature__field-data--date {
+    text-transform: capitalize;
+  }
+  // ATTACHMENTS
+  .mapgis-feature__attachments-title {
+    margin: 0 auto 0 0;
+    font-weight: $text_weight_header;
+  }
+  .mapgis-feature__attachments {
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+  .mapgis-feature .mapgis-feature__attachments-items {
+    display: flex;
+    padding: $cap_spacing 0;
+    margin: floor($cap_spacing/2) 0;
+    width: 100%;
+  }
+  .mapgis-feature .mapgis-feature__attachments-item {
+    line-height: 1.2em;
+    list-style-type: none;
+    margin: 0;
+  }
+  .mapgis-feature__attachment-item-mask {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: $attachment_icon_container_size;
+    height: $attachment_icon_container_size;
+  }
+  .mapgis-feature__attachment-item-mask--icon {
+    background-color: $background_offset_color;
+  }
+  .mapgis-feature__attachment-item-mask--icon .mapgis-feature__attachments-image {
+    width: $attachment_icon_size;
+    height: $attachment_icon_size;
+  }
+  .mapgis-feature__attachments-image-overlay {
+    align-items: center;
+    background-color: $bacground_overlay_color;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 125ms;
+    z-index: 1;
+  }
+  .mapgis-feature__attachments-link-icon {
+    font-size: 15px;
+    transform: translate(0, -10px);
+    transition: transform 125ms ease-out;
+  }
+  .mapgis-feature .mapgis-feature__attachments-item-link {
+    background-color: transparent;
+    display: flex;
+    text-decoration: none;
+    transition: background-color 250ms;
+  }
+  .mapgis-feature__attachments-item-link:hover,
+  .mapgis-feature__attachments-item-link:focus {
+    background-color: $background_hover_color;
+    cursor: pointer;
+  }
+  .mapgis-feature__attachments-item-link:hover .mapgis-feature__attachments-image-overlay,
+  .mapgis-feature__attachments-item-link:focus .mapgis-feature__attachments-image-overlay {
+    color: $text_inverse_color;
+    opacity: 1;
+  }
+  .mapgis-feature__attachments-item-link:hover .mapgis-feature__attachments-link-icon,
+  .mapgis-feature__attachments-item-link:focus .mapgis-feature__attachments-link-icon {
+    transform: translate(0, 0);
+  }
+  .mapgis-feature__attachments--list {
+    // List
+    .mapgis-feature__attachments-items {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    .mapgis-feature__attachments-item {
+      margin-top: floor($cap_spacing/4);
+    }
+    .mapgis-feature__attachments-item:first-child {
+      margin-top: 0;
+    }
+    .mapgis-feature__attachments-item-link {
+      align-items: center;
+      word-break: break-all;
+    }
+    .mapgis-feature__attachment-item-mask {
+      margin-right: floor($side_spacing/2);
+    }
+    .mapgis-feature__attachments-filename {
+      flex: 1;
+    }
+  }
+  .mapgis-feature__attachments--preview {
+    // Preview
+    .mapgis-feature__attachments-items {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .mapgis-feature__attachments-item {
+      width: 50%;
+    }
+    .mapgis-feature__attachments-item-link {
+      align-items: baseline;
+      flex-flow: row wrap;
+      justify-content: center;
+      padding: $cap_spacing floor($side_spacing/2);
+    }
+    .mapgis-feature__attachments-filename {
+      margin-top: floor($cap_spacing/2);
+      overflow: hidden;
+      text-align: center;
+      text-overflow: ellipsis;
+      width: calc(100% - #{$side_spacing});
+    }
+  }
+  // MEDIA
+  .mapgis-feature__media {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .mapgis-feature__media-summary {
+    flex-flow: row nowrap;
+    align-items: center;
+    display: none;
+    margin: 0 floor($side_spacing/2) 0 auto;
+    padding: 0;
+  }
+  .mapgis-feature__media-count {
+    padding: 0 0.2rem;
+  }
+  .mapgis-feature__media-image-summary {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 0.7rem;
+  }
+  .mapgis-feature__media-item-title {
+    font-size: $h2_text_size;
+    padding: 0.3rem 0 0;
+  }
+  .mapgis-feature__media-item-caption {
+    font-size: $body_text_size;
+    padding: 0.1rem 0 0;
+  }
+  .mapgis-feature__media-container {
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    min-height: 150px;
+    margin-top: floor($cap_spacing/2);
+  }
+  .mapgis-feature__media-container .mapgis-feature__button {
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 15%;
+    font-size: 20px;
+    color: $button_text_color;
+    display: none;
+  }
+  .mapgis-feature__media-container .mapgis-feature__button:hover {
+    cursor: pointer;
+    color: $button_text_hover_color;
+  }
+  .mapgis-feature__media-item {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .mapgis-feature__media-chart {
+    //  Dimensions on containing div are required
+    //  for Chart library to know how big to make the chart.
+    width: 250px;
+    height: 250px;
+  }
+  .mapgis-feature__media-previous-icon--rtl,
+  .mapgis-feature__media-next-icon--rtl {
+    display: none;
+  } // MULTIPLE MEDIA
+  .mapgis-feature--media-pagination-visible .mapgis-feature__media-container .mapgis-feature__button {
+    display: flex;
+  }
+  .mapgis-feature--media-pagination-visible .mapgis-feature__media-item-container {
+    flex: 0 0 70%;
+  }
+  .mapgis-feature--media-pagination-visible .mapgis-feature__media-summary {
+    display: flex;
+  }
+  .mapgis-feature--media-pagination-visible .mapgis-feature__media-chart {
+    //  Accounts for media items being smaller
+    //  when there are pagination buttons.
+    width: 225px;
+    height: 225px;
+  } //  SCREEN SIZES
+  .mapgis-view-width-xlarge {
+    @include mediaImgMaxWidth(380);
+  }
+
+  .mapgis-view-width-large {
+    @include mediaImgMaxWidth(280);
+  }
+
+  .mapgis-view-width-medium {
+    @include mediaImgMaxWidth(240);
+  }
+
+  .mapgis-view-width-small {
+    @include mediaImgMaxWidth(225);
+  }
+
+  .mapgis-view-width-xsmall {
+    @include mediaImgMaxWidth(180);
+  }
+
+  .mapgis-view-width-xsmall .mapgis-docked {
+    @include mediaImgMaxWidth(300);
+  } //  RTL
+  html[dir="rtl"] {
+    .mapgis-feature__attachments-title {
+      margin: 0 0 0 auto;
+    }
+    .mapgis-feature__media-summary {
+      margin: 0 auto 0 0;
+    }
+    .mapgis-feature__media-image-summary {
+      margin: 0 0.5em 0 0;
+    }
+    .mapgis-feature__media-previous-icon--rtl,
+    .mapgis-feature__media-next-icon--rtl {
+      display: inline-block;
+    }
+    .mapgis-feature__media-previous-icon,
+    .mapgis-feature__media-next-icon {
+      display: none;
+    }
+    .mapgis-feature__attachments--list .mapgis-feature__attachment-item-mask {
+      margin-right: 0;
+      margin-left: floor($side_spacing/2);
+    }
+  }
+}
+
+@if $include_Feature==true {
+  @include feature();
+}

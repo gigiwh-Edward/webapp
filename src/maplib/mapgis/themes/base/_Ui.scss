@@ -1,0 +1,138 @@
+.mapgis-ui {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+  overflow: hidden;
+
+  .mapgis-component {
+    pointer-events: auto;
+  }
+
+  /* attribution's position is a special case */
+  .mapgis-attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.mapgis-ui-corner {
+  position: absolute;
+  display: flex;
+}
+
+.mapgis-ui-inner-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.mapgis-ui-manual-container > .mapgis-component {
+  position: absolute;
+}
+
+// Top Corners
+.mapgis-ui-top-left,
+.mapgis-ui-top-right {
+  flex-flow: column;
+}
+
+.mapgis-ui-top-left {
+  align-items: flex-start;
+}
+
+.mapgis-ui-top-right {
+  align-items: flex-end;
+}
+
+//  Bottom Corners
+.mapgis-ui-bottom-left,
+.mapgis-ui-bottom-right {
+  flex-flow: row;
+  align-items: flex-end;
+}
+
+.mapgis-ui-bottom-right {
+  flex-flow: row-reverse;
+}
+
+.mapgis-ui-top-left {
+  top: 0;
+  left: 0;
+}
+
+.mapgis-ui-top-right {
+  top: 0;
+  right: 0;
+}
+
+.mapgis-ui-top-right .mapgis-component,
+.mapgis-ui-top-left .mapgis-component {
+  margin-bottom: $view_ui_spacing;
+}
+
+.mapgis-ui-bottom-left {
+  bottom: 0;
+  left: 0;
+
+  .mapgis-component {
+    margin-right: $view_ui_spacing;
+  }
+}
+
+.mapgis-ui-bottom-right {
+  bottom: 0;
+  right: 0;
+
+  .mapgis-component {
+    margin-left: $view_ui_spacing;
+  }
+}
+
+html[dir="rtl"] {
+  .mapgis-ui-top-left {
+    align-items: flex-end;
+  }
+  .mapgis-ui-top-right {
+    align-items: flex-start;
+  }
+  .mapgis-ui-bottom-left,
+  .mapgis-ui-bottom-right {
+    flex-direction: row-reverse;
+  }
+}
+
+/* ZoomBox */
+
+.mapgis-zoom-box__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.mapgis-zoom-box__overlay {
+  cursor: crosshair;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mapgis-zoom-box__overlay-background {
+  fill: rgba(0, 0, 0, 0.1);
+}
+
+.mapgis-zoom-box__outline {
+  fill: transparent;
+  stroke: dodgerblue;
+  stroke-dasharray: 1, 1;
+  stroke-width: 2px;
+}

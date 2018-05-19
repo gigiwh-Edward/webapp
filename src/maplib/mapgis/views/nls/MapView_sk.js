@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.7/mapgis/copyright.txt for details.
+//>>built
+define({"mapgis/widgets/Popup/nls/Popup":{zoom:"Zoom to",next:"Next feature",previous:"Previous feature",close:"Close",dock:"Dock",undock:"Undock",menu:"Menu",untitled:"Untitled",pageText:"{index} of {total}",selectedFeature:"Selected feature",selectedFeatures:"{total} results",loading:"Loading",collapse:"Collapse",expand:"Expand",_localized:{}},"mapgis/widgets/Feature/nls/Feature":{attach:"Attachments",fields:"Fields",fieldsSummary:"List of attributes and values",media:"Media",next:"Next",numCharts:"Number of charts",
+numImages:"Number of images",noTitle:"Untitled",previous:"Previous",_localized:{}},"mapgis/widgets/support/nls/uriUtils":{openInApp:"Open in {appName}",view:"View",_localized:{}},"mapgis/widgets/Attribution/nls/Attribution":{widgetLabel:"Attribution",_localized:{}},"mapgis/widgets/Compass/nls/Compass":{widgetLabel:"Compass",reset:"Reset compass orientation",_localized:{}},"mapgis/widgets/NavigationToggle/nls/NavigationToggle":{widgetLabel:"Navigation Toggle",toggle:"Toggle to pan or rotate in 3D",_localized:{}},
+"mapgis/widgets/Zoom/nls/Zoom":{widgetLabel:"Zoom",zoomIn:"Zoom In",zoomOut:"Zoom Out",_localized:{}}});

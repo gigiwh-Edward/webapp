@@ -1,0 +1,218 @@
+@mixin print() {
+  .mapgis-print {
+    position: relative;
+    padding: $cap_spacing $side_spacing;
+    overflow-y: auto;
+    a {
+      text-decoration: none;
+    }
+    section[aria-hidden="true"] {
+      display: none;
+    }
+    button,
+    [role="button"] {
+      font-family: inherit;
+      height: $button_height;
+      cursor: pointer;
+      border: none;
+    }
+  }
+  .mapgis-print__form-section-container {
+    margin: 0 0 $cap_spacing 0;
+  }
+  .mapgis-print__header-title {
+    font-size: $title_text_size;
+    font-weight: $text_weight_title;
+    padding: 0 0 $cap_spacing;
+    margin: 0 auto 0 0;
+  }
+  .mapgis-print__layout-section,
+  .mapgis-print__map-only-section {
+    padding: $cap_spacing 0 0;
+    border-top: 1px solid $border_color;
+  }
+  .mapgis-print__layout-tab-list {
+    position: relative;
+    bottom: -1px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mapgis-print__layout-tab {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 5px 5px;
+    width: 100%;
+    cursor: pointer;
+    color: $button_text_color;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+  .mapgis-print__layout-tab:hover,
+  .mapgis-print__layout-tab:focus {
+    color: $text_color;
+    background-color: $background_active_color;
+    border-bottom: 1px solid $border_color;
+  }
+  .mapgis-print__layout-tab[aria-selected="true"],
+  .mapgis-print__layout-tab[aria-selected="true"]:hover {
+    background-color: $background_color;
+    color: $text_color;
+    border-color: $border_color;
+    border-bottom-color: $background_color;
+  }
+  .mapgis-print__panel--error {
+    color: $error_text_color;
+  }
+  .mapgis-print__panel-container {
+    flex: 1 0;
+  }
+  .mapgis-print__input-text {
+    width: 100%;
+    margin: 0;
+  }
+  .mapgis-print__scale-input-container {
+    display: flex;
+    align-items: center;
+  }
+  .mapgis-print__advanced-options-section {
+    background-color: $background_offset_color;
+    color: $text_fade_color;
+  }
+  .mapgis-print__advanced-options-button-container {
+    color: $text_fade_color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    overflow: visible;
+  }
+  .mapgis-print__advanced-options-button {
+    width: 100%;
+    background-color: transparent;
+  }
+  .mapgis-print__advanced-options-button[aria-expanded="true"]
+    .mapgis-print__advanced-options-button-icon--closed,
+  .mapgis-print__advanced-options-button[aria-expanded="false"]
+    .mapgis-print__advanced-options-button-icon--opened,
+  .mapgis-print__advanced-options-button .mapgis-print__advanced-options-button-icon--closed-rtl {
+    display: none;
+  }
+  .mapgis-print__advanced-options-button[aria-expanded="false"]
+    .mapgis-print__advanced-options-button-icon--closed,
+  .mapgis-print__advanced-options-button[aria-expanded="true"]
+    .mapgis-print__advanced-options-button-icon--opened {
+    display: block;
+  }
+  .mapgis-print__advanced-options-button-title {
+    font-size: $text_size_small;
+    margin: 0 0.2em;
+  }
+  .mapgis-print__advanced-options-container {
+    font-size: $text_size_small;
+    padding: floor($cap_spacing/2) floor($side_spacing/2);
+    .mapgis-print__form-section-container {
+      margin-bottom: floor($cap_spacing/2);
+    }
+  }
+  .mapgis-print__author-info-container .mapgis-print__input-text {
+    margin-bottom: 0.2em;
+  }
+  .mapgis-print__size-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mapgis-print__advanced-options-section [class*="mapgis-icon"],
+  .mapgis-print__size-container [class*="mapgis-icon"] {
+    background: transparent;
+    font-size: $button_text_size;
+  }
+  .mapgis-print__size-container [class*="mapgis-icon"] {
+    align-self: flex-end;
+  }
+  .mapgis-print__size-container button {
+    color: $button_text_color;
+  }
+  .mapgis-print__width-container,
+  .mapgis-print__height-container {
+    flex: 0 0 43%;
+  }
+  .mapgis-print__swap-button {
+    flex: 0 0 5%;
+  }
+  .mapgis-print__export-title {
+    font-weight: $text_weight_normal;
+    font-size: $h2_text_size;
+  }
+  .mapgis-print__export-button {
+    width: 100%;
+    background-color: $button_color;
+    color: $background_color;
+    border: none;
+    margin: 20px 0;
+  }
+  .mapgis-print__export-button:hover {
+    background-color: $button_hover_color;
+  }
+  .mapgis-print__export-button.mapgis-disabled {
+    pointer-events: none;
+  }
+  .mapgis-print__export-panel-container {
+    font-size: $text_size_small;
+    border-top: 1px solid #ddd;
+    padding: $cap_spacing 0;
+  }
+  .mapgis-print__export-panel-container [class*="mapgis-icon"] {
+    margin-right: 0.5em;
+    margin-top: 0.15em;
+  }
+  .mapgis-print__exported-file-link-title {
+    word-break: break-all;
+  }
+  .mapgis-print__exported-file-link-title.mapgis-disabled {
+    color: $disabled_color;
+  }
+  .mapgis-print__exported-file-link {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.3em;
+    margin-bottom: floor($cap_spacing/2);
+  }
+  .mapgis-print__exported-file--error {
+    color: $error_text_color;
+    cursor: pointer;
+  }
+  .mapgis-print .mapgis-print__exported-file--error:hover {
+    color: $error_text_color;
+  }
+  .mapgis-print__exported-file .mapgis-disabled {
+    pointer-events: none;
+  }
+  .mapgis-print__loader {
+    height: 40px;
+    width: 32px;
+    background: url(../base/images/loading-throb.gif) no-repeat center;
+    margin: 0 auto;
+  }
+  html[dir="rtl"] {
+    .mapgis-print__export-panel-container [class*="mapgis-icon"] {
+      margin-right: 0;
+      margin-left: 0.5em;
+    }
+    .mapgis-print__advanced-options-button[aria-expanded="false"]
+      .mapgis-print__advanced-options-button-icon--closed {
+      display: none;
+    }
+    .mapgis-print__advanced-options-button[aria-expanded="false"]
+      .mapgis-print__advanced-options-button-icon--closed-rtl {
+      display: block;
+    }
+  }
+}
+
+@if $include_Print == true {
+  @include print();
+}

@@ -1,0 +1,250 @@
+@mixin rendererSlider() {
+  .mapgis-renderer-slider {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    font-weight: normal;
+    text-align: left;
+    background-color: #fff;
+  }
+
+  .mapgis-renderer-slider .mapgis-slider-node {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 4px;
+    white-space: nowrap;
+    margin: 0 0 0 80px;
+  }
+
+  .mapgis-renderer-slider .mapgis-slider-area {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #888;
+    width: 2px;
+    height: 200px;
+  }
+
+  .mapgis-renderer-slider .mapgis-slider-area-right {
+    width: 140px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .mapgis-slider-ramp-surface {
+    border: 1px solid #888;
+  }
+
+  .mapgis-renderer-slider .mapgis-slider-area-right *:focus {
+    outline: none;
+  }
+
+  .mapgis-renderer-slider .mapgis-slider-area-right .mapgis-histogram-bar:hover {
+    cursor: pointer;
+    fill: #888;
+  }
+
+  .mapgis-renderer-slider .mapgis-ramp {
+    border: 1px solid #888;
+  }
+
+  .mapgis-renderer-slider .mapgis-moveable {
+    position: absolute;
+    left: 0;
+  }
+
+  .mapgis-renderer-slider .mapgis-handle-container {
+    position: absolute;
+    height: 20px;
+    width: 18px;
+  }
+
+  .mapgis-renderer-slider .mapgis-handle {
+    position: absolute;
+    background-color: #000;
+    border: 1px solid #ccc;
+    border-right: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 10px;
+    height: 14px;
+    top: 3px;
+    background-image: url("../base/images/handles.png");
+    background-position: -15px -8px;
+    z-index: 4;
+    box-shadow: 0px 1px 3px #000;
+  }
+
+  .mapgis-renderer-slider .mapgis-handle-span {
+    background-color: #000;
+    border: 1px solid #ccc;
+    box-shadow: 2px 0 3px #000;
+    height: 12px;
+    width: 12px;
+    transform: scale(0.707) rotate(45deg);
+    position: absolute;
+    z-index: 3;
+    top: 3px;
+    left: 3px;
+  }
+
+  .mapgis-renderer-slider .mapgis-handle:hover,
+  .mapgis-handle-span:hover + .mapgis-handle {
+    background-position: -30px -8px;
+    background-color: #fff;
+  }
+
+  .mapgis-renderer-slider .mapgis-handle-span:hover {
+    cursor: pointer;
+  }
+
+  .mapgis-renderer-slider .mapgis-handle-label {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    text-align: right;
+  }
+
+  .mapgis-renderer-slider .mapgis-handle-label-span:hover {
+    background-color: #e5f2fe;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .mapgis-renderer-slider .mapgis-moveable .dijitNumberTextBox,
+  .mapgis-renderer-slider .mapgis-moveable .dijitValidationTextBox {
+    text-align: start;
+    position: relative;
+    width: 100px;
+    top: -3px;
+    left: 117px;
+    z-index: 99;
+  }
+
+  .mapgis-renderer-slider .mapgis-moveable .dijitValidationTextBox {
+    width: 140px;
+    left: 157px;
+  }
+
+  .mapgis-renderer-slider .mapgis-handler-tick {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+    height: 1px;
+    left: 10px;
+    position: absolute;
+    top: 9px;
+    width: 32px;
+    z-index: 2;
+  }
+
+  .mapgis-renderer-slider .mapgis-handler-tick-top {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #000;
+  }
+
+  .mapgis-renderer-slider .mapgis-handler-tick-bottom {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #fff;
+  }
+
+  .mapgis-renderer-slider .mapgis-top-label-node {
+    margin-bottom: 4px;
+  }
+
+  .mapgis-renderer-slider .mapgis-top-label-node,
+  .mapgis-renderer-slider .mapgis-bottom-label-node {
+    height: 22px;
+    margin: auto;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  .mapgis-renderer-slider .mapgis-top-label-node,
+  .mapgis-renderer-slider .mapgis-bottom-label-node,
+  .mapgis-renderer-slider .mapgis-handle-label {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #444;
+  }
+
+  .mapgis-renderer-slider .mapgis-handler-tick-size {
+    border-top: none !important;
+    border-bottom: 1px solid #000 !important;
+    width: 32px !important;
+  }
+
+  .mapgis-renderer-slider .mapgis-heatmap-tick {
+    width: 34px !important;
+  }
+
+  .mapgis-renderer-slider .mapgis-top-label-node span,
+  .mapgis-renderer-slider .mapgis-bottom-label-node span {
+    height: 20px;
+  }
+
+  .mapgis-renderer-slider .mapgis-top-label-node-hover:hover,
+  .mapgis-renderer-slider .mapgis-bottom-label-node-hover:hover {
+    background-color: #e5f2fe;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  /* RTL Fixes */
+
+  .dj_rtl .mapgis-renderer-slider .mapgis-slider-node {
+    margin: 0 80px 0 0;
+  }
+
+  .dj_rtl .mapgis-renderer-slider .mapgis-slider-area-right {
+    text-align: right;
+  }
+
+  .dj_rtl .mapgis-renderer-slider .mapgis-slider-node .mapgis-handle-label {
+    direction: ltr;
+    unicode-bidi: embed;
+    left: 0;
+    position: absolute;
+    right: auto;
+    text-align: left;
+    top: 3px;
+    padding-left: 3px;
+  }
+
+  .dj_rtl .mapgis-renderer-slider .mapgis-moveable .dijitNumberTextBox {
+    left: -112px;
+    text-align: right;
+  }
+
+  .dj_rtl .mapgis-renderer-slider .mapgis-moveable .dijitValidationTextBox {
+    left: -152px;
+    text-align: right;
+  }
+
+  .dj_rtl .mapgis-renderer-slider .mapgis-handler-tick {
+    left: -42px;
+  }
+
+  .dj_rtl .mapgis-renderer-slider .mapgis-top-label-node,
+  .dj_rtl .mapgis-renderer-slider .mapgis-bottom-label-node {
+    direction: ltr;
+    unicode-bidi: embed;
+  }
+
+  .dj_rtl .mapgis-renderer-slider .mapgis-handle {
+    border: 1px solid #ccc;
+    border-left: none;
+    box-shadow: 0px 1px 3px #000;
+    background-position: -16px -8px;
+  }
+
+  .dj_rtl .mapgis-renderer-slider .mapgis-handle-span {
+    box-shadow: 2px 0 3px #000;
+    left: 1px;
+  }
+}
+
+@if $include_RendererSlider == true {
+  @include rendererSlider();
+}
