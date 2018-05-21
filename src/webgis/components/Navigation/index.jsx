@@ -6,13 +6,10 @@ export default class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            current: 'map'
-        };
-        this.handleClick = this.handleClick.bind(this);
+        this.state = { current: "map" };
     }
 
-    handleClick(e) {
+    handleClick = (e) => {
         this.setState({ current: e.key });
     }
 

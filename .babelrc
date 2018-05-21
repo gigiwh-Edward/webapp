@@ -4,7 +4,8 @@
             "libraryName": "antd",
             "style": true
         }],
-        "syntax-dynamic-import", [
+        "syntax-dynamic-import",
+        "transform-class-properties", [
             "transform-runtime", {
                 "helpers": false,
                 "polyfill": false,

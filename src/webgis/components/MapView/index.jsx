@@ -5,23 +5,16 @@ import './index.css';
 export default class MapView extends Component {
 
     async componentDidMount() {
-        window._config = {};
-        esriLoader.loadCss('/maplib/mapgis/css/main.css');
+        await esriLoader.loadCss('maplib/mapgis/css/main.css');
         await import('script-loader!@/maplib/init');
-        esriLoader.loadModules(['mapgis/views/MapView', 'mapgis/Map'])
-            .then(([MapView, Map]) => {
-                var map = new Map({
-                    basemap: "topo"
-                });
-                var view = new MapView({
-                    map: map,
-                    container: 'viewDiv'
-                });
-            })
-            .catch(err => {
-                console.error(err);
-            });
-
+        const [MapView, Map] = await esriLoader.loadModules(['mapgis/views/MapView', 'mapgis/Map']);
+        var map = new Map({
+            basemap: "topo"
+        });
+        var view = new MapView({
+            map: map,
+            container: 'viewDiv'
+        });
     }
 
     render() {

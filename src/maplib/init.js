@@ -6875,8 +6875,8 @@ require({
 
                     //add by czl 2018-3-6
                     //image类型请求添加_site参数
-                    var _site = _config && _config.userInfo && _config.userInfo.site ? _config.userInfo.site : "";
-                    _site && (d.url += (-1 === d.url.indexOf("?") ? "?" : "\x26") + "_site=" + _site);
+                    var site = window.__site;
+                    site && (d.url += (-1 === d.url.indexOf("?") ? "?" : "\x26") + "_site=" + site);
 
 
                     if (!u.isDataProtocol(d.url) && 2E3 < d.url.length) return x.reject(e.mixin(Error(), { message: "When using responseType 'image', URL length cannot exceed 2000 characters." }));
@@ -6936,7 +6936,8 @@ require({
                         
                         //add by czl 2018-3-6
                         //headers添加Civ-Site参数
-                        d.headers["Civ-Site"] = _config && _config.userInfo && _config.userInfo.site && !a.ignoreSite ? _config.userInfo.site : "";
+                        var site = window.__site;
+                        d.headers["Civ-Site"] = site && !a.ignoreSite ? site : "";
 
 
 
