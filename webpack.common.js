@@ -20,15 +20,12 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/,
-            use: ["style-loader", "css-loader"]
+            include: path.resolve(__dirname, 'src'),
+            use: ["style-loader?sourceMap=true", "css-loader?modules&localIdentName=[local]-[hash:base64:5]"]
         }, {
             test: /\.less$/,
-            use: ["style-loader", "css-loader", {
-                loader: "less-loader",
-                options: {
-                    javascriptEnabled: true
-                }
-            }]
+            exclude: path.resolve(__dirname, 'src'),
+            use: ["style-loader", "css-loader", "less-loader?javascriptEnabled=true&sourceMap=true"]
         }, {
             test: /\.(png|svg|jpg|jpeg|gif)$/,
             use: 'url-loader?limit=1024&name=[path][name].[ext]&outputPath=img/',
