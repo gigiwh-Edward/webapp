@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Menu, Icon } from 'antd';
 const { Item } = Menu;
 
-export default class App extends Component {
+export default class Navigation extends Component {
 
     constructor(props) {
         super(props);
