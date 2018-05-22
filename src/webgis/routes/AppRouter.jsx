@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
-import AsyncComponent from '../components/AsyncComponent';
+import AsyncComponent from '@/common/components/AsyncComponent';
 import App from '../components/App';
 
 export default (props) => {

@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     output: {
         filename: '[name].[hash].js',
-        chunkFilename: '[name].[chunkhash].js',
+        chunkFilename: 'async.[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
