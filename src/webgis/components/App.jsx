@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Layout, Row, Col } from 'antd';
-import Navigation from '../Navigation';
-import Title from '../Title';
-import MapView from '../MapView';
-import styles from './index.css';
+import Navigation from './Navigation';
+import Title from './Title';
+import styles from '../styles/App.css';
 
 const { Header, Content } = Layout;
 
@@ -24,7 +23,7 @@ export default class App extends Component {
           </Row>
         </Header>
         <Content className={styles.content}>
-          <MapView />
+          {this.props.children}
         </Content>
       </Layout>
     );

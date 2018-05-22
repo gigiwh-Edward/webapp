@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     output: {
         filename: '[name].[hash].js',
-        chunkFilename: '[name].[hash].js',
+        chunkFilename: '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
@@ -35,12 +35,7 @@ module.exports = {
         }, {
             test: /\.(js|jsx)$/,
             exclude: /node_modules|maplib/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: ['env', 'react', 'stage-0']
-                }
-            }
+            use: 'babel-loader'
         }]
     }
 };

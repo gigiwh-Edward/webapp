@@ -1,6 +1,6 @@
 import 'es6-shim';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import AppRouter from './routes/AppRouter';
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<AppRouter />, document.getElementById("app"));

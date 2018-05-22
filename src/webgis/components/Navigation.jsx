@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Menu, Icon } from 'antd';
+import { withRouter } from 'react-router-dom';
 const { Item } = Menu;
 
+
+@withRouter
 export default class Navigation extends Component {
 
     constructor(props) {
@@ -11,6 +14,12 @@ export default class Navigation extends Component {
 
     handleClick = (e) => {
         this.setState({ current: e.key });
+        this.goto(e.key); 
+    }
+
+    goto(key) {
+        const path = key == "map" ? "/" : ["/", key].join("");
+        this.props.history.push(path);
     }
 
     render() {
