@@ -17,6 +17,8 @@
 .headerTitle {
     font-size: 24px;
     color: #fff;
+    display: flex;
+    align-items: center;
 }
 .logo{
     width:155xp;
