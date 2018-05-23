@@ -44,7 +44,7 @@ export default class Navigation extends Component {
                 <Item key="tool">
                     <Icon type="tool" />工具
                 </Item>
-                <Item key="model">
+                <Item key="thematic">
                     <Icon type="area-chart" />展示
                 </Item>
                 <Item key="correct">

@@ -368,7 +368,7 @@
         ["text", "dojo/text"]
     ],
     async: 1,
-    baseUrl: "./",
+    baseUrl: "/",
     hasCache: {
         "config-deferredInstrumentation": 0,
         "config-selectorEngine": "acme",

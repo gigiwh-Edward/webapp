@@ -6,7 +6,7 @@ module.exports = merge(common, {
     mode: "development",
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: './dist',
+        contentBase: './src',
         //模块热替换
         hot: true
     },

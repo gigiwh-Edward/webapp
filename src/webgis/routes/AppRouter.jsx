@@ -13,7 +13,7 @@ export default (props) => {
                     <Route exact path="/statistic" component={AsyncComponent(() => import('../components/Search'))} />
                     <Route exact path="/analysis" component={AsyncComponent(() => import('../components/Search'))} />
                     <Route exact path="/tool" component={AsyncComponent(() => import('../components/Search'))} />
-                    <Route exact path="/model" component={AsyncComponent(() => import('../components/Search'))} />
+                    <Route exact path="/thematic" component={AsyncComponent(() => import('../components/Search'))} />
                     <Route exact path="/correct" component={AsyncComponent(() => import('../components/Search'))} />
                 </Switch>
             </App>
