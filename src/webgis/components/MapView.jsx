@@ -9,7 +9,7 @@ export default class MapView extends Component {
         await import('script-loader!@/maplib/init');
         const [MapView, Map] = await esriLoader.loadModules(['mapgis/views/MapView', 'mapgis/Map']);
         let map = new Map({
-            basemap: "streets"
+            basemap: "topo"
         });
         let view = new MapView({
             map: map,
