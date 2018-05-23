@@ -8,7 +8,9 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "watch": "webpack --watch",
         "build": "webpack --config webpack.webgis.prod.js",
-        "start": "webpack-dev-server --open --config webpack.webgis.dev.js"
+        "start": "webpack-dev-server --open --config webpack.webgis.dev.js",
+        "buildsvrmng": "webpack --config webpack.citygismng.prod.js",
+        "debugsvrmng": "webpack-dev-server --open --config webpack.citygismng.dev.js"
     },
     "keywords": [],
     "author": "taurz",

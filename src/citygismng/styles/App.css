@@ -11,6 +11,7 @@
 .header {
     line-height: 46px;
     height: 46px;
+    background: #002140;
 }
 
 
@@ -23,7 +24,7 @@
 .logo{
     width:155xp;
     height:30px;
-    padding-right: 10px;
+    padding-right: 30px;
 }
 
 .layout {
@@ -34,9 +35,10 @@
     position: relative;
 }
 
-.content2{
+.main{
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }

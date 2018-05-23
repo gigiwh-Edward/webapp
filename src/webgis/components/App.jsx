@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Row, Col } from 'antd';
 import Navigation from './Navigation';
 import Title from './Title';
+import MapView from './MapView';
 import styles from '../styles/App.css';
 import mapgis_logo from "../images/mapgis-white.png";
 
@@ -24,7 +25,10 @@ export default class App extends Component {
           </Row>
         </Header>
         <Content className={styles.content}>
+        <MapView />
+        <div className={styles.content2}>
           {this.props.children}
+        </div>
         </Content>
       </Layout>
     );
