@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Row, Col } from 'antd';
 import Navigation from './Navigation';
 import Title from './Title';
-import MapView from './MapView';
+import MapView from '@/common/components/MapView';
 import styles from '../styles/App.css';
 import mapgis_logo from "../images/mapgis-white.png";
 
