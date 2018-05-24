@@ -8,13 +8,12 @@ export default (props) => {
         <HashRouter>
             <App>
                 <Switch>
-                    <Route path="/" component={null} />
-                    <Route path="/search" component={AsyncComponent(() => import('../components/Search'))} />
-                    <Route path="/statistic" component={AsyncComponent(() => import('../components/Statistic'))} />
-                    <Route path="/analysis" component={AsyncComponent(() => import('../components/Analysis'))} />
-                    <Route path="/tool" component={AsyncComponent(() => import('../components/Tool'))} />
-                    <Route path="/thematic" component={AsyncComponent(() => import('../components/Thematic'))} />
-                    <Route path="/correct" component={AsyncComponent(() => import('../components/Correct'))} />
+                    <Route exact path="/search" component={AsyncComponent(() => import('../components/Search'))} />
+                    <Route exact path="/statistic" component={AsyncComponent(() => import('../components/Statistic'))} />
+                    <Route exact path="/analysis" component={AsyncComponent(() => import('../components/Analysis'))} />
+                    <Route exact path="/tool" component={AsyncComponent(() => import('../components/Tool'))} />
+                    <Route exact path="/thematic" component={AsyncComponent(() => import('../components/Thematic'))} />
+                    <Route exact path="/correct" component={AsyncComponent(() => import('../components/Correct'))} />
                 </Switch>
             </App>
         </HashRouter>
