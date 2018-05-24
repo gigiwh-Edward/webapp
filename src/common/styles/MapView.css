@@ -1,13 +1,11 @@
-:global {
-    .mapgis-view .mapgis-view-surface--inset-outline:focus::after {
-        outline: none!important
-    }
-    #viewDiv {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-    }
+:global(.mapgis-view .mapgis-view-surface--inset-outline:focus::after) {
+    outline: none!important
 }
 
+.mapView {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
