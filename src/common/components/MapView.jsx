@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import esriLoader from 'esri-loader';
-import styles from '../styles/MapView.css';
+import '../styles/MapView.css';
 
 export default class MapView extends Component {
 
@@ -39,7 +39,7 @@ export default class MapView extends Component {
 
     render() {
         return (
-            <div id="viewDiv" className={styles.mapView}></div>
+            <div id="viewDiv"></div>
         );
     }
 }
