@@ -6875,7 +6875,7 @@ require({
 
                     //add by czl 2018-3-6
                     //image类型请求添加_site参数
-                    var site = window.__site;
+                    var site = sessionStorage.getItem("_site");
                     site && (d.url += (-1 === d.url.indexOf("?") ? "?" : "\x26") + "_site=" + site);
 
 
@@ -6936,7 +6936,7 @@ require({
                         
                         //add by czl 2018-3-6
                         //headers添加Civ-Site参数
-                        var site = window.__site;
+                        var site = sessionStorage.getItem("_site");
                         d.headers["Civ-Site"] = site && !a.ignoreSite ? site : "";
 
 

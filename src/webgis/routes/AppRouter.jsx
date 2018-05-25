@@ -8,7 +8,6 @@ export default (props) => {
         <HashRouter>
             <App>
                 <Switch>
-                    <Route exact path="/" component={null} />
                     <Route exact path="/search" component={AsyncComponent(() => import('../components/Search'))} />
                     <Route exact path="/statistic" component={AsyncComponent(() => import('../components/Statistic'))} />
                     <Route exact path="/analysis" component={AsyncComponent(() => import('../components/Analysis'))} />

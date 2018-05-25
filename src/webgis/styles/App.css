@@ -5,7 +5,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    min-width: 1000px;
+    min-width: 1024px;
 }
 
 .header {
@@ -13,16 +13,17 @@
     height: 46px;
 }
 
-
 .headerTitle {
     font-size: 24px;
     color: #fff;
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
-.logo{
-    width:155xp;
-    height:30px;
+
+.logo {
+    width: 155xp;
+    height: 30px;
     padding-right: 10px;
 }
 
@@ -34,9 +35,9 @@
     position: relative;
 }
 
-.content2{
+.content2 {
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
 }

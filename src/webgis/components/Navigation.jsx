@@ -9,12 +9,17 @@ export default class Navigation extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { current: "map" };
+        this.state = { current: this.getKey(this.props.location.pathname) };
     }
-
+    
     handleClick = (e) => {
         this.setState({ current: e.key });
-        this.goto(e.key); 
+        this.goto(e.key);
+    }
+
+    getKey(pathname) {
+        let key = pathname.substr(1);
+        return !!key ? key : "map";
     }
 
     goto(key) {
