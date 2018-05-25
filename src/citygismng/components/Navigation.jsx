@@ -45,7 +45,7 @@ export default class Navigation extends Component {
                 style={{ height: '100%', borderRight: 0 }}
             >
                 <SubMenu key="svrmng" title={<span><Icon type="database" />服务器管理</span>}>
-                    <Item key="svrlist">服务器列表</Item>
+                    <Item key="svrlist">服务器状态</Item>
                     <Item key="svrmonitor">服务器监控</Item>
                 </SubMenu>
                 <SubMenu key="vectordata" title={<span><Icon type="picture" />矢量地图</span>}>

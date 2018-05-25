@@ -25,10 +25,10 @@ export default class App extends Component {
           </Row>
         </Header>
         <Content className={styles.content}>
-        <MapView />
-        <div className={styles.content2}>
-          {this.props.children}
-        </div>
+          <MapView />
+          <div className={styles.content2}>
+            {this.props.children}
+          </div>
         </Content>
       </Layout>
     );
