@@ -16,9 +16,9 @@ export default class MapView extends Component {
             "mapgis/config"
         ]);
 
-        mapgisConfig.request.corsEnabledServers.push("172.16.10.122:8010");
-        let elevLyr = new ElevationLayer({ url: "http://172.16.10.122:8010/CityInterface/rest/services/ImageServer.svc/HuaXi" });
-        let tileLyr = new TileLayer({ url: "http://172.16.10.122:8010/Cityinterface/rest/services/MapServer.svc/HuaXi" });
+        mapgisConfig.request.corsEnabledServers.push("192.168.12.4:8082");
+        let elevLyr = new ElevationLayer({ url: "http://192.168.12.4:8082/CityInterface/rest/services/ImageServer.svc/huaxi" });
+        let tileLyr = new TileLayer({ url: "http://192.168.12.4:8082/Cityinterface/rest/services/MapServer.svc/huaxi" });
         let map = new Map({
             basemap: {
                 baseLayers: [tileLyr],
