@@ -8,7 +8,7 @@ export default (props) => {
         <HashRouter>
             <App>
                 <Switch>
-                    <Route exact path="/svrlist" component={AsyncComponent(() => import('../components/Search'))} />
+                    <Route exact path="/svrlist" component={AsyncComponent(() => import('../components/ServicesMng'))} />
                     <Route exact path="/svrmonitor" component={AsyncComponent(() => import('../components/Search'))} />
                     
                     <Route exact path="/pipenetdata" component={AsyncComponent(() => import('../components/Search'))} />

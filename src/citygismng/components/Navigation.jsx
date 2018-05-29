@@ -9,7 +9,7 @@ export default class Navigation extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { current: "svrmng", openKeys: ['svrlist'], };
+        this.state = { current: "svrmng", openKeys: ['svrmng'], };
         this.rootSubmenuKeys = ['svrmng', 'vectordata', 'tiledata', 'tdmng', 'gdbcatalog'];
     }
 
@@ -42,10 +42,11 @@ export default class Navigation extends Component {
                 defaultSelectedKeys={['svrlist']}
                 onOpenChange={this.onOpenChange}
                 openKeys={this.state.openKeys}
+                onClick={this.handleClick}
                 style={{ height: '100%', borderRight: 0 }}
             >
-                <SubMenu key="svrmng" title={<span><Icon type="database" />服务器管理</span>}>
-                    <Item key="svrlist">服务器状态</Item>
+                <SubMenu key="svrmng" title={<span><Icon type="database" />服务</span>}>
+                    <Item key="svrlist">管理服务</Item>
                     <Item key="svrmonitor">服务器监控</Item>
                 </SubMenu>
                 <SubMenu key="vectordata" title={<span><Icon type="picture" />矢量地图</span>}>
